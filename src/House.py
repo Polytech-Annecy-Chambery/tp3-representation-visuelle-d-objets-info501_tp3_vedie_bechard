@@ -6,6 +6,7 @@ Created on Thu Nov 16 19:47:50 2017
 """
 import OpenGL.GL as gl
 
+
 class House:
     # Constructor
     def __init__(self, parameters = {}) :  
@@ -18,9 +19,10 @@ class House:
 
         # Sets the default parameters 
         if 'position' not in self.parameters:
-            self.parameters['position'] = [0, 0, 0]  
+            self.parameters['position'] = [0, 0, 0]   
         if 'orientation' not in self.parameters:
-            self.parameters['orientation'] = 0  
+            self.parameters['orientation'] = 0
+
                 
         # Objects list
         self.objects = []
@@ -41,5 +43,10 @@ class House:
             
     # Draws the house      
     def draw(self):  
-        # A compléter en remplaçant pass par votre code
-        pass        
+        gl.glPushMatrix()
+        gl.glTranslate(self.parameters['position'][0],self.parameters['position'][1],self.parameters['position'][2])
+        gl.glRotate(self.parameters['orientation'],0,0,1)
+        for i in self.objects:
+            i.draw()
+        gl.glPopMatrix()
+
