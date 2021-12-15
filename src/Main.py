@@ -28,23 +28,25 @@ def Q2b():
     # Ecriture en utilisant le chaînage
     return Configuration().add(
             Section({'position': [1, 1, 0], 'width':7, 'height':2.6})
-            ) 
+            ).display()
 
 def Q2c():
     # Ecriture en utilisant le chaînage
     return Configuration().add(
             Section({'position': [1, 1, 0], 'width':7, 'height':2.6, 'edges': True})
-            )
+            ).display()
 
 def Q3a():
-    pass  
+    return Configuration().add(
+            Wall({'position': [1, 1, 0], 'width':7, 'height':2.6, 'edges': True,'orientation':90})
+            ).display()
 
 def Q4a():
     # Ecriture en utilisant des variables : A compléter
-    wall1 = Wall(...)
-    wall2 = Wall(...)
-    wall3 = Wall(...)
-    wall4 = Wall(...)  
+    wall1 = Wall({'position':[0,0,0], 'width':7,'height':3,'edges':True,'orientation':0})
+    wall2 = Wall({'position':[0,-7,0], 'width':7,'height':3,'edges':True,'orientation':90})
+    wall3 = Wall({'position':[0,-3.5,0], 'width':7,'height':3,'edges':True,'orientation':0})
+    wall4 = Wall({'position':[-3.5,-3.5,0], 'width':7,'height':3,'edges':True,'orientation':90})  
     house = House({'position': [-3, 1, 0], 'orientation':0})
     house.add(wall1).add(wall3).add(wall4).add(wall2)
     return Configuration().add(house)   
@@ -94,13 +96,13 @@ def Q6():
 def main():
     # Enlever un des commentaires pour la question traitée
     
-    configuration = Q1a()
+    #configuration = Q1a()
     # configuration = Q1b_f()
     # configuration = Q2b()
     # configuration = Q2c()
-    # configuration = Q3a()
-    # configuration = Q4a()
-    # configuration = Q5a()
+    #configuration = Q3a()
+    #configuration = Q4a()
+    configuration = Q5a()
     # configuration = Q5b()
     # configuration = Q5c1()
     # configuration = Q5c2() 
