@@ -23,16 +23,10 @@ class Wall:
         # Sets the default parameters
         if 'position' not in self.parameters:
             self.parameters['position'] = [0, 0, 0]        
-        if 'width' not in self.parameters:
-            raise Exception('Parameter "width" required.')   
-        if 'height' not in self.parameters:
-            raise Exception('Parameter "height" required.')   
+
         if 'orientation' not in self.parameters:
             self.parameters['orientation'] = 0              
-        if 'thickness' not in self.parameters:
-            self.parameters['thickness'] = 0.2    
-        if 'color' not in self.parameters:
-            self.parameters['color'] = [0.5, 0.5, 0.5]       
+    
             
         # Objects list
         self.objects = []
